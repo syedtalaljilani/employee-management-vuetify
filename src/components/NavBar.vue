@@ -26,7 +26,7 @@
     </v-btn>
     <v-btn
       @click="drawer = !drawer"
-      flat
+      text
       :ripple="false"
       class="d-md-none d-lg-none d-xl-none d-sm-flex"
     >
@@ -35,10 +35,12 @@
   </v-toolbar>
   <v-navigation-drawer
     v-model="drawer"
-    class="black flat d-md-none d-lg-none d-xl-none d-sm-flex"
-    disable-route-watcher
-    disable-resize-watcher
+    class="black text d-md-none d-lg-none d-xl-none d-sm-flex"
     fixed
+    disable-resize-watcher
+    disable-route-watcher
+    hide-overlay
+  
   >
     <v-list>
       <v-list-item v-for="link in links" :key="link.name" :to="link.route">
